@@ -1,0 +1,20 @@
+{
+	"name": "Chrome SharePoint Fix",
+	"version": "0.1",
+	"homepage_url": "https://github.com/indstry/chrome-sharepoint-fix",
+	"description": "Fixes Sharepoint issues in Chrome",
+	"content_scripts": [ {
+		"matches": [
+			"*://*/*.aspx*"
+		],
+		"js": [
+			"jquery.js",
+			"chrome_sp.js"
+		]
+	} ],
+	"icons": {
+		"128": "icon.png"
+	},
+	"permissions": [ "*://*/" ],
+	"manifest_version": 2
+}
