@@ -1,16 +1,14 @@
 jQuery(document).ready( function ($) {
-
-	function is_sharepoint() {
+  // Check if SharePoint
+	function isSharepoint() {
 		var generator = $("head meta[name='GENERATOR']").attr('content');
-
 		return generator == "Microsoft SharePoint";
 	}
-
-	function fix_sharepoint() {
-    _spBodyOnLoadWrapper()
+	function sharepointFix() {
+    // SP JS call to fix menus and scrolling.
+    _spBodyOnLoadWrapper();
 	}
-
-	if ( is_sharepoint() ) {
-		fix_sharepoint();
+	if (isSharepoint()){
+		sharepointFix();
 	}
-} );
+});
