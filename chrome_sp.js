@@ -1,12 +1,15 @@
 function isSharepoint() { 
-   var metas = document.getElementsByTagName('meta'); 
-
-   for (i=0; i<metas.length; i++) { 
-      if (metas[i].getAttribute("name") == "GENERATOR") { 
-         generator = metas[i].getAttribute("content");
-         return generator == "Microsoft SharePoint"; 
-      } 
-   }
+  var metas = document.getElementsByTagName('meta'); 
+  var sphtml = document.getElementsByTagName("html")[0]; 
+  for (i=0; i<metas.length; i++) { 
+    if (metas[i].getAttribute("name") == "GENERATOR") { 
+      generator = metas[i].getAttribute("content");
+      return generator == "Microsoft SharePoint"; 
+    } 
+  }
+  if(document.getElementsByTagName("html")[0].getAttribute("xmlns:o") == "urn:schemas-microsoft-com:office:office"){
+    return true;
+  }
   return false;
 }
 
