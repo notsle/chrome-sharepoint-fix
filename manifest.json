@@ -1,6 +1,6 @@
 {
 	"name": "SharePoint Fix",
-	"version": "0.1.2",
+	"version": "0.1.4",
 	"homepage_url": "https://github.com/indstry/chrome-sharepoint-fix",
 	"description": "Fixes Sharepoint issues in Chrome",
 	"content_scripts": [ {
